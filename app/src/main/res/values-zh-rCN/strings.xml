@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Revice 印章测试</string>
+    <string name="Label_Status">状态</string>
+    <string name="Text_Status_Unknown">未知</string>
+    <string name="Button_Test">测试红外</string>
+    <string name="Switch_HeartBeat">开启心跳</string>
+    <string name="Button_Henshin_Wait">变身待机</string>
+    <string name="Button_Henshin">变身</string>
+    <string name="Button_Hissatsu">必杀</string>
+    <string name="Button_Hissatsu_Wait">必杀待机</string>
+    <string name="Button_Remix">Remix</string>
+    <string name="Button_Remix_Wait">Remix待机</string>
+    <string name="Text_Status_Available">可用</string>
+    <string name="Text_Status_Unavailable">不可用</string>
+    <string name="Label_Version">软件版本</string>
+    <string name="Text_OS">开源</string>
+</resources>

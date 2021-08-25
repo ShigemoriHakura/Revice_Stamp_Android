@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Revice Stamp Pro</string>
+    <string name="Label_Status">Status</string>
+    <string name="Label_Version">Version</string>
+    <string name="Text_OS">Open-Source</string>
+    <string name="Text_Status_Unknown">Unknown</string>
+    <string name="Text_Status_Available">Available</string>
+    <string name="Text_Status_Unavailable">Unavailable</string>
+    <string name="Button_Test">Test IR</string>
+    <string name="Switch_HeartBeat">HeartBeat</string>
+    <string name="Button_Henshin_Wait">Henshin Wait</string>
+    <string name="Button_Henshin">Henshin</string>
+    <string name="Button_Hissatsu">Hissatsu</string>
+    <string name="Button_Hissatsu_Wait">Hissatsu Wait</string>
+    <string name="Button_Remix">Remix</string>
+    <string name="Button_Remix_Wait">Remix Wait</string>
+</resources>

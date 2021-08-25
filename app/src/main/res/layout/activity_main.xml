@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Label_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Label_Status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Text_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Text_Status_Unknown"
+        app:layout_constraintStart_toEndOf="@+id/Label_Status"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Button_IRTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Button_Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Label_Version" />
+
+    <TextView
+        android:id="@+id/Label_Align"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="-------------"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_IRTest" />
+
+    <Switch
+        android:id="@+id/Switch_HeartBeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Switch_HeartBeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_IRTest" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/Label_Align"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/Button_Henshin_Wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Henshin_Wait" />
+
+        <Button
+            android:id="@+id/Button_Henshin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Henshin" />
+
+        <Button
+            android:id="@+id/Button_Hissatsu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Hissatsu_Wait" />
+
+        <Button
+            android:id="@+id/Button_Hissatsu_Finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Hissatsu" />
+
+        <Button
+            android:id="@+id/Button_Remix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Remix_Wait" />
+
+        <Button
+            android:id="@+id/Button_Remix_Finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="10dp"
+            android:insetTop="10dp"
+            android:insetRight="10dp"
+            android:insetBottom="10dp"
+            android:text="@string/Button_Remix" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Label_Version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Label_Version"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Label_Status" />
+
+    <TextView
+        android:id="@+id/Text_Version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/Label_Version"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Status" />
+
+    <TextView
+        android:id="@+id/Label_OS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Text_OS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
