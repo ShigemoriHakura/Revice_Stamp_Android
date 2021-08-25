@@ -80,12 +80,18 @@ public class MainActivity extends AppCompatActivity {
 
         ((Switch) findViewById(R.id.Switch_HeartBeat)).setOnCheckedChangeListener(Switch_HeartBeat_Listener);
 
-        IR_Available = IR_Service.hasIrEmitter();
-        if (IR_Available) {
-            ((TextView) findViewById(R.id.Text_Status)).setText(R.string.Text_Status_Available);
-            ((Switch) findViewById(R.id.Switch_HeartBeat)).setChecked(true);
-        }else{
+        try {
+            IR_Available = IR_Service.hasIrEmitter();
+            if (IR_Available) {
+                ((TextView) findViewById(R.id.Text_Status)).setText(R.string.Text_Status_Available);
+                ((Switch) findViewById(R.id.Switch_HeartBeat)).setChecked(true);
+            } else {
+                ((TextView) findViewById(R.id.Text_Status)).setText(R.string.Text_Status_Unavailable);
+                ((Switch) findViewById(R.id.Switch_HeartBeat)).setClickable(false);
+            }
+        }catch (Exception e) {
             ((TextView) findViewById(R.id.Text_Status)).setText(R.string.Text_Status_Unavailable);
+            ((Switch) findViewById(R.id.Switch_HeartBeat)).setClickable(false);
         }
 
         HandlerThread thread = new HandlerThread("ReviceHBHandler");
@@ -175,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(alert) {
             Log.e(TAG, "\nCalced :\n"
-                + Arrays.toString(code));
+                    + Arrays.toString(code));
         }
 
         return code;

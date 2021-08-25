@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.shirosaki.revicestamppro"
-        minSdkVersion 26
-        targetSdkVersion 26
+        minSdkVersion 19
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
