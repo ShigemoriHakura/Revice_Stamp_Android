@@ -7,9 +7,11 @@ import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((TextView) findViewById(R.id.Text_Version)).setText("0.1");
+        ((TextView) findViewById(R.id.Text_Version)).setText("0.2");
         findViewById(R.id.Button_IRTest).setOnClickListener(Button_IRTest_Listener);
 
         findViewById(R.id.Button_Henshin_Wait).setOnClickListener(new View.OnClickListener() {
@@ -75,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendCode(156);
+            }
+        });
+
+        findViewById(R.id.Button_CommandSend).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Editable str = ((EditText) findViewById(R.id.EditText_Command)).getText();
+                int command = Integer.parseInt(str.toString());
+                sendCode(command);
             }
         });
 
@@ -134,16 +145,18 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void sendCode(int binary){
-        if(System.currentTimeMillis() - LastSent < 200){
-            try {
-                Thread.sleep(System.currentTimeMillis() - LastSent);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        int[] command = getCodeFromBinary(binary, false);
         if(IR_Available) {
+            if(System.currentTimeMillis() - LastSent < 200){
+                try {
+                    Thread.sleep(System.currentTimeMillis() - LastSent);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            int[] command = getCodeFromBinary(binary, false);
             sendIRCommand(command);
+        }else{
+            Toast.makeText(MainActivity.this, "Unavailable!", Toast.LENGTH_LONG).show();
         }
     }
 

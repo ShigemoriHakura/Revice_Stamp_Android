@@ -36,15 +36,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Label_Version" />
 
-    <TextView
-        android:id="@+id/Label_Align"
+    <Button
+        android:id="@+id/Button_CommandSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="-------------"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Button_IRTest" />
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/Button_Send"
+        app:layout_constraintStart_toEndOf="@+id/EditText_Command"
+        app:layout_constraintTop_toBottomOf="@+id/Switch_HeartBeat" />
 
     <Switch
         android:id="@+id/Switch_HeartBeat"
@@ -59,9 +59,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="120dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/Label_Align"
+        app:layout_constraintTop_toBottomOf="@+id/Button_IRTest"
         tools:layout_editor_absoluteX="0dp">
 
         <Button
@@ -153,5 +153,17 @@
         android:text="@string/Text_OS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditText_Command"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Switch_HeartBeat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

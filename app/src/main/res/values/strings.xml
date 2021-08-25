@@ -7,6 +7,7 @@
     <string name="Text_Status_Available">Available</string>
     <string name="Text_Status_Unavailable">Unavailable</string>
     <string name="Button_Test">Test IR</string>
+    <string name="Button_Send">Send Command</string>
     <string name="Switch_HeartBeat">HeartBeat</string>
     <string name="Button_Henshin_Wait">Henshin Wait</string>
     <string name="Button_Henshin">Henshin</string>

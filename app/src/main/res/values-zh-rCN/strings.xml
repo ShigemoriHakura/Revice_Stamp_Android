@@ -15,4 +15,5 @@
     <string name="Text_Status_Unavailable">不可用</string>
     <string name="Label_Version">软件版本</string>
     <string name="Text_OS">开源</string>
+    <string name="Button_Send">发送指令</string>
 </resources>
